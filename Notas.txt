@@ -1,0 +1,47 @@
+---- Notas ----
+
+---- Odoo Installation ----
+
+Curso de Odoo para principiantes y desarrolladores (Odoo, Odoo.sh, y Odoo.com) ----> https://youtu.be/jzpp-sLP-gI?feature=shared
+https://www.odoo.com/es/slides/all?search=+dev
+https://www.odoo.com/documentation/18.0/administration/on_premise/source.html
+https://docs.python.org/3/library/venv.html
+
+Clonar repositorio
+    git clone https://github.com/odoo/odoo.git
+
+Instalar python-3.12.7
+    python --version
+
+Activar virtualizacion
+    python -m venv <venv>
+    <venv>\Scripts\activate.bat
+    python -m venv venv
+    venv\Scripts\activate
+
+Instalar paquetes de Python
+    pip install setuptools wheel
+    pip install -r requirements.txt
+    python odoo-bin -r dbuser -w dbpassword --addons-path=addons -d mydb
+    python odoo-bin -r dbodoo -w conejitalinda777{{Angular}} --addons-path=addons -d odoo -i base ----> levantar odoo, -i base crea o reinicia las base de datos (tablas, etc)
+    python odoo-bin -r dbodoo -w conejitalinda777{{Angular}} --addons-path=addons -d odoo         ----> levantar odoo
+    python odoo-bin -r dbodoo -w conejitalinda777{{Angular}} --addons-path=addons,modules -d odoo ----> levantar odoo, con modulos personalizados incluidos
+
+Abrir Odoo
+    http://localhost:8069
+
+---- Odoo Framework ----
+
+https://www.odoo.com/documentation/18.0/es/developer/reference/frontend/framework_overview.html
+https://www.odoo.com/documentation/18.0/es/contributing/development.html
+https://www.odoo.com/documentation/18.0/es/contributing/development/coding_guidelines.html
+
+---- Odoo Module Development ----
+
+https://www.odoo.com/documentation/18.0/developer/tutorials/backend.html
+
+Activar virtualizacion
+    venv\Scripts\activate
+
+Crear modulo "school" en la carpeta "modules" en Odoo
+    python odoo-bin scaffold school modules
